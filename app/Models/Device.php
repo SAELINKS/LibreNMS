@@ -567,7 +567,7 @@ class Device extends BaseModel
 
     public function muninPlugins()
     {
-        return $this->hasMany('App\Models\MuninPlugin', 'device_id');
+        return $this->hasMany(\App\Models\MuninPlugin::class, 'device_id');
     }
 
     public function ospfInstances()
