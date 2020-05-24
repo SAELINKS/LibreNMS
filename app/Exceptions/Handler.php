@@ -38,7 +38,7 @@ class Handler extends ExceptionHandler
     {
         // If for some reason Blade hasn't been registered, try it now
         try {
-            if (!app()->bound('view')) {
+            if (! app()->bound('view')) {
                 app()->register(\App\Providers\ViewServiceProvider::class);
                 app()->register(\Illuminate\Translation\TranslationServiceProvider::class);
             }
@@ -59,7 +59,7 @@ class Handler extends ExceptionHandler
     protected function convertExceptionToArray(Exception $e)
     {
         // override the non-debug error output to clue in user on how to debug
-        if (!config('app.debug') && !$this->isHttpException($e)) {
+        if (! config('app.debug') && ! $this->isHttpException($e)) {
             return ['message' => 'Server Error: Set APP_DEBUG=true to see details.'];
         }
 

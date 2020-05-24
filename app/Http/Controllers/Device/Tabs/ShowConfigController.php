@@ -1,6 +1,6 @@
 <?php
 /**
- * ShowConfigController.php
+ * ShowConfigController.php.
  *
  * -Description-
  *
@@ -17,7 +17,6 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
- * @package    LibreNMS
  * @link       http://librenms.org
  * @copyright  2020 Tony Murray
  * @author     Tony Murray <murraytony@gmail.com>
@@ -85,8 +84,8 @@ class ShowConfigController extends Controller implements DeviceTab
 
     private function findRancidConfigFile()
     {
-        if (Config::has('rancid_configs') && !is_array(Config::get('rancid_configs'))) {
-            Config::set('rancid_configs', (array)Config::get('rancid_configs', []));
+        if (Config::has('rancid_configs') && ! is_array(Config::get('rancid_configs'))) {
+            Config::set('rancid_configs', (array) Config::get('rancid_configs', []));
         }
 
         if (Config::has('rancid_configs.0')) {
@@ -96,14 +95,14 @@ class ShowConfigController extends Controller implements DeviceTab
                     $configs .= '/';
                 }
 
-                if (is_file($configs . $device['hostname'])) {
-                    return $configs . $device['hostname'];
-                } elseif (is_file($configs . strtok($device['hostname'], '.'))) { // Strip domain
-                    return $configs . strtok($device['hostname'], '.');
+                if (is_file($configs.$device['hostname'])) {
+                    return $configs.$device['hostname'];
+                } elseif (is_file($configs.strtok($device['hostname'], '.'))) { // Strip domain
+                    return $configs.strtok($device['hostname'], '.');
                 } else {
-                    if (!empty(Config::get('mydomain'))) { // Try with domain name if set
-                        if (is_file($configs . $device['hostname'] . '.' . Config::get('mydomain'))) {
-                            return $configs . $device['hostname'] . '.' . Config::get('mydomain');
+                    if (! empty(Config::get('mydomain'))) { // Try with domain name if set
+                        if (is_file($configs.$device['hostname'].'.'.Config::get('mydomain'))) {
+                            return $configs.$device['hostname'].'.'.Config::get('mydomain');
                         }
                     }
                 }

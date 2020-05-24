@@ -23,7 +23,7 @@ class PollerController extends Controller
     {
         return view('poller.log', [
             'current_tab' => 'log',
-            'filter' => $request->input('filter', 'active')
+            'filter' => $request->input('filter', 'active'),
         ]);
     }
 

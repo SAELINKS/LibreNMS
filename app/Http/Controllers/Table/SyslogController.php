@@ -1,6 +1,6 @@
 <?php
 /**
- * SyslogController.php
+ * SyslogController.php.
  *
  * -Description-
  *
@@ -17,7 +17,6 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
- * @package    LibreNMS
  * @link       http://librenms.org
  * @copyright  2018 Tony Murray
  * @author     Tony Murray <murraytony@gmail.com>
@@ -57,14 +56,14 @@ class SyslogController extends TableController
     }
 
     /**
-     * Defines the base query for this resource
+     * Defines the base query for this resource.
      *
      * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Database\Eloquent\Builder|\Illuminate\Database\Query\Builder
      */
     public function baseQuery($request)
     {
-        /** @var Builder $query */
+        /* @var Builder $query */
         return Syslog::hasAccess($request->user())
             ->with('device')
             ->when($request->device_group, function ($query) use ($request) {

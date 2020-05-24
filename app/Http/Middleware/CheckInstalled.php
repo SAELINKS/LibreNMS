@@ -1,6 +1,6 @@
 <?php
 /**
- * CheckInstalled.php
+ * CheckInstalled.php.
  *
  * Check if LibreNMS install has been completed (config.php exists) and redirect to install.php as needed.
  *
@@ -17,7 +17,6 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
- * @package    LibreNMS
  * @link       http://librenms.org
  * @copyright  2018 Tony Murray
  * @author     Tony Murray <murraytony@gmail.com>
@@ -38,7 +37,7 @@ class CheckInstalled
      */
     public function handle($request, Closure $next)
     {
-        if (!file_exists(base_path('config.php')) && !$request->is('install.php')) {
+        if (! file_exists(base_path('config.php')) && ! $request->is('install.php')) {
             // no config.php does so let's redirect to the install
             return redirect(url('/install.php'));
         }

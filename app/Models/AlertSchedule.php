@@ -1,6 +1,6 @@
 <?php
 /**
- * AlertSchedule.php
+ * AlertSchedule.php.
  *
  * -Description-
  *
@@ -17,7 +17,6 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
- * @package    LibreNMS
  * @link       http://librenms.org
  * @copyright  2018 Tony Murray
  * @author     Tony Murray <murraytony@gmail.com>
@@ -63,8 +62,8 @@ class AlertSchedule extends Model
                     ->where('end_recurring_hr', '>=', DB::raw("date_format(NOW(), '%H:%i:%s')"))
                     // Check we are on the correct day of the week
                     ->where(function ($query) {
-                            /** @var Builder $query */
-                            $query->where('recurring_day', 'like', DB::raw("CONCAT('%', date_format(NOW(), '%w'), '%')"))
+                        /* @var Builder $query */
+                        $query->where('recurring_day', 'like', DB::raw("CONCAT('%', date_format(NOW(), '%w'), '%')"))
                                 ->orWhereNull('recurring_day')
                                 ->orWhere('recurring_day', '');
                     });

@@ -1,6 +1,6 @@
 <?php
 /**
- * UserController.php
+ * UserController.php.
  *
  * -Description-
  *
@@ -17,7 +17,6 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
- * @package    LibreNMS
  * @link       http://librenms.org
  * @copyright  2018 Tony Murray
  * @author     Tony Murray <murraytony@gmail.com>
@@ -99,10 +98,12 @@ class UserController extends Controller
 
         if ($user->save()) {
             Toastr::success(__('User :username created', ['username' => $user->username]));
+
             return redirect(route('users.index'));
         }
 
         Toastr::error(__('Failed to create user'));
+
         return redirect()->back();
     }
 
@@ -144,7 +145,7 @@ class UserController extends Controller
 
             // if enabled and 3 or more failures
             $last_failure = isset($twofactor['last']) ? (time() - $twofactor['last']) : 0;
-            $data['twofactor_locked'] = isset($twofactor['fails']) && $twofactor['fails'] >= 3 && (!$lockout_time || $last_failure < $lockout_time);
+            $data['twofactor_locked'] = isset($twofactor['fails']) && $twofactor['fails'] >= 3 && (! $lockout_time || $last_failure < $lockout_time);
         }
 
         return view('user.edit', $data);
@@ -174,6 +175,7 @@ class UserController extends Controller
                 Toastr::success(__('User :username updated', ['username' => $user->username]));
             } else {
                 Toastr::error(__('Failed to update user :username', ['username' => $user->username]));
+
                 return redirect()->back();
             }
         }
@@ -208,6 +210,7 @@ class UserController extends Controller
             $existing = UserPref::getPref($user, 'dashboard');
             if ($dashboard != $existing) {
                 UserPref::setPref($user, 'dashboard', $dashboard);
+
                 return true;
             }
         }
