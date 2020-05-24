@@ -54,7 +54,8 @@
         "tecnickcom/tcpdf": "~6.2.0",
         "tightenco/ziggy": "^0.8.0",
         "wpb/string-blade-compiler": "4.0.x-dev",
-        "xjtuwangke/passwordhash": "dev-master"
+        "xjtuwangke/passwordhash": "dev-master",
+        "laravel/ui": "^2.0"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.2",
