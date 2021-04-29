@@ -2320,6 +2320,20 @@
                 }
             ],
             "description": "PHPMailer is a full-featured email creation and transfer class for PHP",
+            "funding": [
+                {
+                    "url": "https://marcus.bointon.com/donations/",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/Synchro",
+                    "type": "github"
+                },
+                {
+                    "url": "https://www.patreon.com/marcusbointon",
+                    "type": "patreon"
+                }
+            ],
             "time": "2020-03-14T14:23:48+00:00"
         },
         {
@@ -2878,23 +2892,30 @@
         },
         {
             "name": "rmccue/requests",
-            "version": "v1.7.0",
+            "version": "v1.8.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/rmccue/Requests.git",
-                "reference": "87932f52ffad70504d93f04f15690cf16a089546"
+                "url": "https://github.com/WordPress/Requests.git",
+                "reference": "afbe4790e4def03581c4a0963a1e8aa01f6030f1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rmccue/Requests/zipball/87932f52ffad70504d93f04f15690cf16a089546",
-                "reference": "87932f52ffad70504d93f04f15690cf16a089546",
+                "url": "https://api.github.com/repos/WordPress/Requests/zipball/afbe4790e4def03581c4a0963a1e8aa01f6030f1",
+                "reference": "afbe4790e4def03581c4a0963a1e8aa01f6030f1",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.2"
             },
             "require-dev": {
-                "requests/test-server": "dev-master"
+                "dealerdirect/phpcodesniffer-composer-installer": "^0.7",
+                "php-parallel-lint/php-console-highlighter": "^0.5.0",
+                "php-parallel-lint/php-parallel-lint": "^1.3",
+                "phpcompatibility/php-compatibility": "^9.0",
+                "phpunit/phpunit": "^4.8 || ^5.7 || ^6.5 || ^7.5",
+                "requests/test-server": "dev-master",
+                "squizlabs/php_codesniffer": "^3.5",
+                "wp-coding-standards/wpcs": "^2.0"
             },
             "type": "library",
             "autoload": {
@@ -2913,7 +2934,7 @@
                 }
             ],
             "description": "A HTTP library written in PHP, for human beings.",
-            "homepage": "http://github.com/rmccue/Requests",
+            "homepage": "http://github.com/WordPress/Requests",
             "keywords": [
                 "curl",
                 "fsockopen",
@@ -2923,7 +2944,7 @@
                 "iri",
                 "sockets"
             ],
-            "time": "2016-10-13T00:11:37+00:00"
+            "time": "2021-04-27T11:05:25+00:00"
         },
         {
             "name": "spatie/laravel-cors",
@@ -4892,12 +4913,12 @@
             "version": "v0.8.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/tightenco/ziggy.git",
+                "url": "https://github.com/tighten/ziggy.git",
                 "reference": "4c4b29bc658153f0771b0a145173ce83a7b6b885"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tightenco/ziggy/zipball/4c4b29bc658153f0771b0a145173ce83a7b6b885",
+                "url": "https://api.github.com/repos/tighten/ziggy/zipball/4c4b29bc658153f0771b0a145173ce83a7b6b885",
                 "reference": "4c4b29bc658153f0771b0a145173ce83a7b6b885",
                 "shasum": ""
             },
@@ -5066,16 +5087,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/TerrePorter/StringBladeCompiler.git",
-                "reference": "7ea77404940e1845a20d0c1e0e68d986be0fb7e4"
+                "reference": "37b59455a00aa8a910edf683446d5d362136aa3f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/TerrePorter/StringBladeCompiler/zipball/7ea77404940e1845a20d0c1e0e68d986be0fb7e4",
-                "reference": "7ea77404940e1845a20d0c1e0e68d986be0fb7e4",
+                "url": "https://api.github.com/repos/TerrePorter/StringBladeCompiler/zipball/37b59455a00aa8a910edf683446d5d362136aa3f",
+                "reference": "37b59455a00aa8a910edf683446d5d362136aa3f",
                 "shasum": ""
             },
             "require": {
-                "laravel/framework": "^6.0",
+                "laravel/framework": "^6.0|^7.0",
                 "php": "^7.2"
             },
             "type": "library",
@@ -5110,14 +5131,14 @@
                 "compiler",
                 "laravel"
             ],
-            "time": "2019-10-31T23:38:15+00:00"
+            "time": "2020-08-31T22:03:32+00:00"
         },
         {
             "name": "xjtuwangke/passwordhash",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/xjtuwangke/passwordhash.git",
+                "url": "git@github.com:xjtuwangke/passwordhash.git",
                 "reference": "a7bcd9705add858cd496bdd8cdc9bbed231e8bb3"
             },
             "dist": {
@@ -6026,6 +6047,7 @@
                 "faker",
                 "fixtures"
             ],
+            "abandoned": true,
             "time": "2019-12-12T13:22:17+00:00"
         },
         {
@@ -7219,6 +7241,7 @@
             "keywords": [
                 "tokenizer"
             ],
+            "abandoned": true,
             "time": "2019-09-17T06:23:10+00:00"
         },
         {
@@ -8314,12 +8337,12 @@
             "version": "1.8.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/webmozart/assert.git",
+                "url": "https://github.com/webmozarts/assert.git",
                 "reference": "ab2cb0b3b559010b75981b1bdce728da3ee90ad6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webmozart/assert/zipball/ab2cb0b3b559010b75981b1bdce728da3ee90ad6",
+                "url": "https://api.github.com/repos/webmozarts/assert/zipball/ab2cb0b3b559010b75981b1bdce728da3ee90ad6",
                 "reference": "ab2cb0b3b559010b75981b1bdce728da3ee90ad6",
                 "shasum": ""
             },
